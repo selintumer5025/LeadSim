@@ -47,19 +47,26 @@ class ReportService:
         conversation: Conversation, 
         scenario: Scenario
     ) -> List[CompetencyScore]:
-        """Analyze conversation and score each competency"""
+        """Analyze conversation and score each competency
+        
+        Note: This is a simplified implementation for demonstration.
+        In production, this should use NLP/AI analysis to evaluate responses
+        based on actual conversation content and competency indicators.
+        """
         scores = []
         
         for competency in scenario.competencies:
-            # Simplified scoring - in production, use NLP/AI analysis
-            # Base score with some randomness for demo
-            base_score = random.uniform(60, 95)
-            
-            # Adjust based on conversation length (engagement)
+            # Simplified scoring - uses conversation engagement as a proxy
+            # TODO: Replace with actual NLP/AI-based content analysis
             message_count = len([m for m in conversation.messages if m.role == "user"])
-            engagement_bonus = min(message_count * 2, 10)
             
-            final_score = min(base_score + engagement_bonus, 100)
+            # Base score from engagement (more messages = more engagement)
+            engagement_score = min(60 + (message_count * 5), 85)
+            
+            # Add variance based on competency weight
+            weight_bonus = competency.weight * random.uniform(0, 10)
+            
+            final_score = min(engagement_score + weight_bonus, 100)
             
             scores.append(CompetencyScore(
                 competency_id=competency.id,

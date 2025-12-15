@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Tuple
 from app.models import Message, Conversation, ConversationResponse, Scenario
 from datetime import datetime
 
@@ -10,7 +10,7 @@ class ConversationService:
         self.conversations: Dict[str, Conversation] = {}
         self.conversation_counter = 0
     
-    def start_conversation(self, scenario: Scenario) -> tuple[str, str]:
+    def start_conversation(self, scenario: Scenario) -> Tuple[str, str]:
         """Start a new conversation for a scenario"""
         conversation_id = f"conv_{self.conversation_counter}"
         self.conversation_counter += 1
