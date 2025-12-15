@@ -51,8 +51,11 @@ class ConversationService:
             timestamp=datetime.now().isoformat()
         ))
         
-        # Check if conversation should end (simple heuristic: after 5 exchanges)
-        is_complete = len(conversation.messages) >= 10
+        # Check if conversation should end
+        # Note: This uses a simple message count threshold. In production,
+        # this should be configurable per scenario or based on conversation quality
+        MIN_MESSAGES_FOR_COMPLETION = 10
+        is_complete = len(conversation.messages) >= MIN_MESSAGES_FOR_COMPLETION
         
         return ConversationResponse(
             message=response_text,

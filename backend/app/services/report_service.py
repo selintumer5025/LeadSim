@@ -5,7 +5,6 @@ from app.models import (
     CompetencyScore
 )
 from typing import List
-import random
 
 
 class ReportService:
@@ -63,8 +62,9 @@ class ReportService:
             # Base score from engagement (more messages = more engagement)
             engagement_score = min(60 + (message_count * 5), 85)
             
-            # Add variance based on competency weight
-            weight_bonus = competency.weight * random.uniform(0, 10)
+            # Add variance based on competency weight and conversation length
+            # Using deterministic approach based on message count for consistency
+            weight_bonus = competency.weight * (message_count % 10)
             
             final_score = min(engagement_score + weight_bonus, 100)
             
