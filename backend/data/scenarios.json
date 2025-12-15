@@ -1,0 +1,86 @@
+[
+  {
+    "id": "conflict-resolution",
+    "title": "Ekip İçi Çatışma Yönetimi",
+    "description": "İki üst düzey ekip üyesi arasında bir proje yaklaşımı konusunda anlaşmazlık var. Lider olarak durumu nasıl ele alırsınız?",
+    "context": "Şirketinizde kritik bir proje yürütülüyor. Ekibinizin iki kıdemli üyesi, projenin nasıl ilerlemesi gerektiği konusunda farklı görüşlere sahip. Anlaşmazlık ekip moralini ve proje ilerlemesini etkiliyor.",
+    "competencies": [
+      {
+        "id": "communication",
+        "name": "İletişim",
+        "description": "Etkili dinleme ve net ifade becerisi",
+        "weight": 1.5
+      },
+      {
+        "id": "conflict-management",
+        "name": "Çatışma Yönetimi",
+        "description": "Yapıcı çözümler bulma ve uzlaşma sağlama",
+        "weight": 2.0
+      },
+      {
+        "id": "emotional-intelligence",
+        "name": "Duygusal Zeka",
+        "description": "Duyguları anlama ve yönetme",
+        "weight": 1.5
+      }
+    ],
+    "initial_prompt": "Senaryomuza hoş geldiniz. Ekibinizde iki kıdemli üye arasında bir anlaşmazlık var. İlk adım olarak ne yapardınız?",
+    "difficulty_level": "intermediate"
+  },
+  {
+    "id": "change-management",
+    "title": "Değişim Yönetimi",
+    "description": "Organizasyonda büyük bir değişiklik planlanıyor ve ekibiniz bu değişime direniyor. Nasıl yönetirsiniz?",
+    "context": "Şirket yeni bir teknoloji sistemine geçiş yapacak. Ekibinizin birçok üyesi bu değişime karşı çıkıyor ve endişeleri var. Liderleri olarak bu geçişi başarılı bir şekilde yönetmeniz gerekiyor.",
+    "competencies": [
+      {
+        "id": "change-leadership",
+        "name": "Değişim Liderliği",
+        "description": "Değişimi yönlendirme ve adaptasyonu kolaylaştırma",
+        "weight": 2.0
+      },
+      {
+        "id": "communication",
+        "name": "İletişim",
+        "description": "Vizyonu açıkça iletme ve endişeleri dinleme",
+        "weight": 1.5
+      },
+      {
+        "id": "empathy",
+        "name": "Empati",
+        "description": "Ekip üyelerinin duygularını ve endişelerini anlama",
+        "weight": 1.5
+      }
+    ],
+    "initial_prompt": "Ekibiniz yaklaşan teknoloji değişikliğine direniyor. Bu durumla nasıl başa çıkarsınız?",
+    "difficulty_level": "advanced"
+  },
+  {
+    "id": "delegation",
+    "title": "Yetki Devri ve Güçlendirme",
+    "description": "Ekip üyelerinize nasıl etkili bir şekilde görev dağıtır ve onları güçlendirirsiniz?",
+    "context": "Yeni bir proje başlıyor ve ekibinize görevler atamanız gerekiyor. Bazı ekip üyeleri daha fazla sorumluluk almak isterken, bazıları mevcut iş yüklerinden endişeli.",
+    "competencies": [
+      {
+        "id": "delegation",
+        "name": "Yetki Devri",
+        "description": "Görevleri etkili şekilde dağıtma ve takip etme",
+        "weight": 2.0
+      },
+      {
+        "id": "team-development",
+        "name": "Ekip Gelişimi",
+        "description": "Ekip üyelerinin güçlü yönlerini belirleme ve geliştirme",
+        "weight": 1.5
+      },
+      {
+        "id": "trust-building",
+        "name": "Güven Oluşturma",
+        "description": "Ekiple güven ilişkisi kurma",
+        "weight": 1.0
+      }
+    ],
+    "initial_prompt": "Yeni bir projede görev dağılımı yapmanız gerekiyor. Yaklaşımınız nasıl olurdu?",
+    "difficulty_level": "beginner"
+  }
+]
