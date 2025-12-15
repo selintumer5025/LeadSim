@@ -1,13 +1,8 @@
 from fastapi import APIRouter, HTTPException
-from app.services.conversation_service import ConversationService
-from app.services.scenario_service import ScenarioService
-from app.services.report_service import ReportService
 from app.models import DevelopmentReport
+from app.dependencies import conversation_service, scenario_service, report_service
 
 router = APIRouter(prefix="/api/reports", tags=["reports"])
-conversation_service = ConversationService()
-scenario_service = ScenarioService()
-report_service = ReportService()
 
 
 @router.get("/{conversation_id}", response_model=DevelopmentReport)

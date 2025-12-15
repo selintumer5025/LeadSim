@@ -1,10 +1,9 @@
 from fastapi import APIRouter, HTTPException
-from app.services.scenario_service import ScenarioService
 from app.models import Scenario
 from typing import List
+from app.dependencies import scenario_service
 
 router = APIRouter(prefix="/api/scenarios", tags=["scenarios"])
-scenario_service = ScenarioService()
 
 
 @router.get("/", response_model=List[Scenario])

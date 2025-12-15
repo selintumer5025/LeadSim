@@ -1,12 +1,9 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.services.conversation_service import ConversationService
-from app.services.scenario_service import ScenarioService
 from app.models import ConversationResponse
+from app.dependencies import conversation_service, scenario_service
 
 router = APIRouter(prefix="/api/conversations", tags=["conversations"])
-conversation_service = ConversationService()
-scenario_service = ScenarioService()
 
 
 class StartConversationRequest(BaseModel):
